@@ -166,6 +166,10 @@ section#films .films-list #films-caroussel {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
 section#films .films-list #films-caroussel li.caroussel-item {
@@ -208,8 +212,8 @@ section#films .caroussel-controllers button.prev::before {
   content: "";
   display: block;
   background-color: #fff;
-  height: 2px;
-  width: 30px;
+  height: 1px;
+  width: 50px;
   -webkit-transition: width 0.3s;
   transition: width 0.3s;
   margin-right: 10px;
@@ -219,18 +223,18 @@ section#films .caroussel-controllers button.next::after {
   content: "";
   display: block;
   background-color: #fff;
-  height: 2px;
-  width: 30px;
+  height: 1px;
+  width: 50px;
   -webkit-transition: width 0.3s;
   transition: width 0.3s;
   margin-left: 10px;
 }
 
 section#films .caroussel-controllers button.prev:hover::before {
-  width: 40px;
+  width: 60px;
 }
 
 section#films .caroussel-controllers button.next:hover::after {
-  width: 40px;
+  width: 60px;
 }
 /*# sourceMappingURL=main.css.map */

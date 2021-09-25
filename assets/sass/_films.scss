@@ -39,6 +39,7 @@ section#films .films-list {
         display: flex;
         flex-wrap: nowrap;
         width: fit-content;
+        transition: transform 0.4s;
 
         li.caroussel-item {
             height: auto;
@@ -72,8 +73,8 @@ section#films .caroussel-controllers {
             content: "";
             display: block;
             background-color: #fff;
-            height: 2px;
-            width: 30px;
+            height: 1px;
+            width: 50px;
             transition: width 0.3s;
 
             @if ($previous) {
@@ -92,10 +93,10 @@ section#films .caroussel-controllers {
         }
 
         &.prev:hover::before {
-            width: 40px;
+            width: 60px;
         }
         &.next:hover::after {
-            width: 40px;
+            width: 60px;
         }
     }
 }
