@@ -1,7 +1,3 @@
-section#title-description {
-  color: #fff;
-}
-
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -100,6 +96,25 @@ input, select {
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  background: none;
+  border: none;
 }
 
 section#films {
@@ -108,7 +123,114 @@ section#films {
   background-color: #000;
 }
 
-section#films #films-list {
+section#films .films-list {
+  width: 100vw;
+  padding: 0 1rem;
+}
+
+section#films .films-list .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section#films .films-list .links li {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+section#films .films-list .links a {
+  color: #fff;
+  font-family: "Yu Gothic";
+  text-transform: uppercase;
+  width: 90px;
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.2rem;
+  margin: 3rem 0;
+}
+
+section#films .films-list .caroussel-container {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+section#films .films-list #films-caroussel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+section#films .films-list #films-caroussel li.caroussel-item {
+  height: auto;
+  width: calc(100vw - 2rem);
+}
+
+section#films .films-list #films-caroussel li.caroussel-item img {
   width: 100%;
+}
+
+section#films .caroussel-controllers {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section#films .caroussel-controllers button {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0.7;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+section#films .caroussel-controllers button:hover {
+  opacity: 1;
+}
+
+section#films .caroussel-controllers button.prev::before {
+  content: "";
+  display: block;
+  background-color: #fff;
+  height: 2px;
+  width: 30px;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+  margin-right: 10px;
+}
+
+section#films .caroussel-controllers button.next::after {
+  content: "";
+  display: block;
+  background-color: #fff;
+  height: 2px;
+  width: 30px;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+  margin-left: 10px;
+}
+
+section#films .caroussel-controllers button.prev:hover::before {
+  width: 40px;
+}
+
+section#films .caroussel-controllers button.next:hover::after {
+  width: 40px;
 }
 /*# sourceMappingURL=main.css.map */

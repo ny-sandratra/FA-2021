@@ -6,6 +6,96 @@ section#films {
     background-color: #000;
 }
 
-section#films #films-list {
-    width: 100%;
+section#films .films-list {
+    width: 100vw;
+    padding: 0 1rem;
+
+    .links {
+        display: flex;
+
+        li {
+            width: fit-content;
+        }
+
+        a {
+            color: #fff;
+            font-family: "Yu Gothic";
+            text-transform: uppercase;
+            width: 90px;
+            display: block;
+            font-size: 0.8rem;
+            letter-spacing: 0.1rem;
+            line-height: 1.2rem;
+            margin: 3rem 0;
+        }
+    }
+
+    .caroussel-container {
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    #films-caroussel {
+        display: flex;
+        flex-wrap: nowrap;
+        width: fit-content;
+
+        li.caroussel-item {
+            height: auto;
+            width: calc(100vw - 2rem);
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+section#films .caroussel-controllers {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+        color: #fff;
+        display: flex;
+        align-items: center;
+        opacity: 0.7;
+        transition: 0.3s;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        @mixin controller-trail($previous: true) {
+            content: "";
+            display: block;
+            background-color: #fff;
+            height: 2px;
+            width: 30px;
+            transition: width 0.3s;
+
+            @if ($previous) {
+                margin-right: 10px;
+            }
+            @else {
+                margin-left: 10px;
+            }
+        }
+
+        &.prev::before {
+            @include controller-trail;
+        }
+        &.next::after {
+            @include controller-trail(false);
+        }
+
+        &.prev:hover::before {
+            width: 40px;
+        }
+        &.next:hover::after {
+            width: 40px;
+        }
+    }
 }
