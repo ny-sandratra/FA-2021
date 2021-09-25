@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "ACEA,AAAA,OAAO,AAAA,MAAM,CAAC;EACV,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,gBAAgB,EAAE,IAAI;CACzB",
     "sources": [
-        "../sass/main.scss"
+        "../sass/main.scss",
+        "../sass/_films.scss"
     ],
     "names": [],
     "file": "main.css"
